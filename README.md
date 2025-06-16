@@ -1,75 +1,54 @@
-# 📊 Hotel Booking Analysis Report
+# 📊 Hotel Booking Analysis Project
 
-This project explores and analyzes hotel booking data to uncover insights about booking patterns, cancellation behavior, market segment trends, and average daily rates (ADR) across time. The analysis was done using Python, pandas, and visualization libraries like Matplotlib and Seaborn.
+### 🔍 Overview
+This project explores hotel booking data to uncover trends in cancellations, revenue, guest demographics, and booking behaviors. Using Python and data visualization tools, we analyze patterns to generate insights that can help hotel businesses improve their operations.
 
----
+### 📁 Dataset
+- **Source**: Hotel Booking Demand dataset
+- **Format**: CSV
+- **Includes**: City & Resort hotels, bookings, guests, prices, cancellations, etc.
 
-## 🗂️ Dataset Overview
-
-- Dataset: `hotel_bookings.csv`
-- Records: ~119,000
-- Features include: `hotel type`, `country`, `market segment`, `is_canceled`, `adr`, `arrival_date`, and more.
-
----
-
-## 🧹 Data Cleaning
-
-- Standardized column names to lowercase
-- Converted date fields and derived additional fields like `month` and `quarter`
-- Handled missing values appropriately
+### 🛠️ Tools & Technologies
+- Python
+- Pandas
+- Matplotlib & Seaborn
+- Jupyter Notebook
 
 ---
 
-## 📈 Key Analyses & Visualizations
+## 📈 Key Insights & Visualizations
 
-### 1. 🔄 Cancellations by Hotel Type
-- City Hotel had higher cancellation rates compared to Resort Hotel
-- Pie chart and bar plots used to visualize cancellation ratios
+| Focus Area                   | Insight |
+|-----------------------------|---------|
+| ADR (Average Daily Rate)    | Peaks during Q3 & Q4 |
+| Cancellations               | More common in City Hotels |
+| Countries                   | Top 10 countries have higher cancellation rates |
+| Market Segment              | OTA (Online Travel Agents) dominate bookings |
+| Quarterly Analysis          | Business is highly seasonal |
 
-### 2. 🌍 Top 10 Countries by Cancellations
-- Most cancellations came from Portugal, the UK, France, and others
-- Visualized using a pie chart
-
-### 3. 🏷️ Market Segment Analysis
-- **Online TA (Travel Agents)** is the most dominant market segment
-- Direct bookings showed fewer cancellations
-- Pie chart and bar plot used to compare segment performance
-
-### 4. 💰 ADR (Average Daily Rate) by Month & Hotel Type
-- City Hotel had peak ADR in summer months (July–August)
-- Resort Hotel showed more balanced ADR throughout the year
-- Bar chart grouped by hotel type and month
-
-### 5. 🕓 Quarterly ADR Trends
-- Q3 showed the highest ADR across both hotel types
-- Useful for revenue management and pricing decisions
-- Line plot used to show quarterly trend
+![Quarterly ADR](images/adr_quarterly.png)
+![Top Countries](images/top_countries_pie.png)
 
 ---
 
 ## 🧠 Business Insights
-
-- High cancellations from specific countries → Target these markets with flexible policies
-- Q3 is revenue peak → Adjust staffing, inventory, and marketing accordingly
-- Focus on **Direct** and **Corporate** segments to reduce cancellations
-- Invest in improving **Online TA** booking experience
-
----
-
-## 📎 Technologies Used
-
-- Python (Pandas, Matplotlib, Seaborn)
-- Jupyter Notebook
-- Exported as PDF for documentation
+- Improve pricing strategy during seasonal peaks.
+- Reduce cancellation rate through flexible policies.
+- Target guests from countries with lower cancellation history.
+- Focus on OTA channel management.
 
 ---
 
-## 📤 How to Run
+## 📂 Project Files
+- `hotelbooking v1.ipynb` – Full code notebook
+- `hotelbooking.pdf` – Final clean report
+- `hotel_bookings.csv` – Dataset used
+
+---
+
+## 📌 Getting Started
 
 ```bash
-# Clone the repo
-git clone https://github.com/yourusername/hotel-booking-analysis.git
-
-# Navigate and open the notebook
+git clone https://github.com/deeepanbe/hotel-booking-analysis.git
 cd hotel-booking-analysis
-jupyter notebook hotelbooking.ipynb
+pip install pandas matplotlib seaborn
